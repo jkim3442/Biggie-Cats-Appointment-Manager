@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard - BIGGIE MANAGER</title>
+    <link rel="stylesheet" href="css/dashboard.css" />
+  </head>
+  <body>
+    <div class="navbar">
+      <h1>BIGGIE MANAGER</h1>
+      <a href="index.html">Log Out</a>
+    </div>
+    <div class="main-container">
+      <div class="sidebar">
+        <h3>Past Appointments</h3>
+        <div id="pastAppointments">
+          <!-- Recent appointments will be loaded here -->
+        </div>
+        <h3>Upcoming Appointments</h3>
+        <div id="upcomingAppointments">
+          <!-- Recent appointments will be loaded here -->
+        </div>
+      </div>
+      <div class="calendar-container">
+        <button id="prevMonth">&laquo; Previous</button>
+        <button id="nextMonth">Next &raquo;</button>
+        <h2 id="monthYear"></h2>
+        <div class="calendar" id="calendar"></div>
+      </div>
+    </div>
+    <div id="appModal"></div>
+    <script src="js/dashboard.js"></script>
+  </body>
+</html>
