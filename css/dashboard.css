@@ -1,0 +1,207 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #121212;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+}
+
+.navbar {
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    font-size: 1.5em;
+}
+
+.navbar a {
+    float: right;
+    color: white;
+    text-decoration: none;
+}
+
+.main-container {
+    display: flex;
+    height: 100%;
+    width: 100%;
+}
+
+.sidebar {
+    width: 20%;
+    background-color: #252525;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+}
+
+.sidebar h3{
+    font-size: 25px;
+}
+
+#pastAppointments{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#upcomingAppointments{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.calendar-container {
+    width: 80%;
+    margin: 20px;
+    text-align: center;
+    padding: 20px;
+    background-color: #252525;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+}
+
+.calendar {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-auto-rows: 130px;
+    gap: 5px;
+}
+
+.calendar .day-container {
+    padding: 20px;
+    background-color: #333;
+    border: 1px solid #444;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    transition-duration: 0.3s;
+}
+
+.calendar .day-container:hover {
+    transform: scale(1.2);
+    border: 2px solid white;
+}
+
+.calendar .day-header {
+    background-color: black;
+    color: green;
+    font-weight: bold;
+    padding: 10px;
+    border: none;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.calendar .day {
+    padding: 15px 0px;
+    text-align: right;
+    cursor: pointer;
+}
+
+button {
+    margin: 10px;
+    padding: 5px 10px;
+    background-color: green;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+#monthYear {
+    margin: 40px 0;
+    font-size: 4em;
+}
+
+.navbar a{
+    padding: 5px;
+}
+
+.navbar a:hover{
+    background-color: green;
+    padding: 5px 20px;
+    border-radius: 10px;
+}
+
+
+.modal {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fefefe;
+    color: black;
+    display: none;
+    border: 1px solid #888;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.modalScrollContent {
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+.modalOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+
+.btnContainer {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 50px;
+}
+
+
+.appDate {
+    text-align: right;
+}
+
+.appTitle {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.outerAppContainer {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+}
+
+.appBtnContainer {
+    display: flex;
+    flex-direction: column;
+}
+
+.appDeleteBtn {
+    background-color: red;
+}
+
+.appDeleteBtn:hover {
+    background-color: darkred;
+}
+
+.appCloseBtn {
+    background-color: grey;
+}
+
+.appCloseBtn:hover {
+    background-color: darkgrey;
+}

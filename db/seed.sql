@@ -1,0 +1,37 @@
+INSERT INTO users (username, password, email) VALUES ('alice', '$2y$10$DQoRoBMqE/VJwz/ZYqhnhOqIZk/Ll8LYcD5ONMVlFkqxs6Dg2LlRG', 'alice@example.com');
+INSERT INTO users (username, password, email) VALUES ('bob', '$2y$10$DQoRoBMqE/VJwz/ZYqhnhOqIZk/Ll8LYcD5ONMVlFkqxs6Dg2LlRG', 'bob@example.com');
+INSERT INTO appointments (user_id, title, description, start_time, end_time) VALUES
+(1, 'Morning Review', 'Review today’s agenda', DATE_FORMAT(NOW(), '%Y-%m-%d 09:00:00'), DATE_FORMAT(NOW(), '%Y-%m-%d 10:00:00')),
+(1, 'Team Meeting', 'Weekly team synchronization', DATE_FORMAT(NOW(), '%Y-%m-%d 11:00:00'), DATE_FORMAT(NOW(), '%Y-%m-%d 12:00:00')),
+(1, 'Client Discussion', 'Discuss requirements with client', DATE_FORMAT(NOW(), '%Y-%m-%d 15:00:00'), DATE_FORMAT(NOW(), '%Y-%m-%d 16:00:00'));
+INSERT INTO appointments (user_id, title, description, start_time, end_time) VALUES
+(1, 'Project Planning', 'Planning phase of the new project', DATE_FORMAT(DATE_SUB(NOW(), INTERVAL 1 DAY), '%Y-%m-%d 10:00:00'), DATE_FORMAT(DATE_SUB(NOW(), INTERVAL 1 DAY), '%Y-%m-%d 11:00:00')),
+(1, 'Budget Review', 'Review quarterly budget', DATE_FORMAT(DATE_SUB(NOW(), INTERVAL 2 DAY), '%Y-%m-%d 13:00:00'), DATE_FORMAT(DATE_SUB(NOW(), INTERVAL 2 DAY), '%Y-%m-%d 14:00:00')),
+(1, 'Client Meeting', 'Discuss project updates with client', DATE_FORMAT(DATE_SUB(NOW(), INTERVAL 3 DAY), '%Y-%m-%d 10:00:00'), DATE_FORMAT(DATE_SUB(NOW(), INTERVAL 3 DAY), '%Y-%m-%d 11:00:00')),
+(1, 'Dentist Appointment', 'Routine dental check-up', DATE_FORMAT(DATE_SUB(NOW(), INTERVAL 4 DAY), '%Y-%m-%d 09:30:00'), DATE_FORMAT(DATE_SUB(NOW(), INTERVAL 4 DAY), '%Y-%m-%d 10:30:00')),
+(1, 'Team Sync', 'Weekly team meeting', DATE_FORMAT(DATE_SUB(NOW(), INTERVAL 5 DAY), '%Y-%m-%d 14:00:00'), DATE_FORMAT(DATE_SUB(NOW(), INTERVAL 5 DAY), '%Y-%m-%d 15:00:00')),
+(1, 'Project Review', 'Review project progress', DATE_FORMAT(DATE_SUB(NOW(), INTERVAL 6 DAY), '%Y-%m-%d 11:00:00'), DATE_FORMAT(DATE_SUB(NOW(), INTERVAL 6 DAY), '%Y-%m-%d 12:00:00')),
+(1, 'Lunch Break', 'Take a break and have lunch', DATE_FORMAT(DATE_SUB(NOW(), INTERVAL 7 DAY), '%Y-%m-%d 12:30:00'), DATE_FORMAT(DATE_SUB(NOW(), INTERVAL 7 DAY), '%Y-%m-%d 13:30:00')),
+(1, 'Conference Call', 'Discuss quarterly results', DATE_FORMAT(DATE_SUB(NOW(), INTERVAL 8 DAY), '%Y-%m-%d 15:30:00'), DATE_FORMAT(DATE_SUB(NOW(), INTERVAL 8 DAY), '%Y-%m-%d 16:30:00')),
+(1, 'Gym Session', 'Workout session at the gym', DATE_FORMAT(DATE_SUB(NOW(), INTERVAL 9 DAY), '%Y-%m-%d 18:00:00'), DATE_FORMAT(DATE_SUB(NOW(), INTERVAL 9 DAY), '%Y-%m-%d 19:00:00')),
+(1, 'Shopping', 'Grocery shopping', DATE_FORMAT(DATE_SUB(NOW(), INTERVAL 10 DAY), '%Y-%m-%d 10:00:00'), DATE_FORMAT(DATE_SUB(NOW(), INTERVAL 10 DAY), '%Y-%m-%d 11:30:00')),
+(1, 'Presentation Preparation', 'Prepare slides for presentation', DATE_FORMAT(DATE_SUB(NOW(), INTERVAL 11 DAY), '%Y-%m-%d 13:00:00'), DATE_FORMAT(DATE_SUB(NOW(), INTERVAL 11 DAY), '%Y-%m-%d 14:30:00')),
+(1, 'Dinner with Friends', 'Dine out with friends', DATE_FORMAT(DATE_SUB(NOW(), INTERVAL 12 DAY), '%Y-%m-%d 19:00:00'), DATE_FORMAT(DATE_SUB(NOW(), INTERVAL 12 DAY), '%Y-%m-%d 20:30:00')),
+(1, 'Yoga Class', 'Attend yoga class', DATE_FORMAT(DATE_SUB(NOW(), INTERVAL 13 DAY), '%Y-%m-%d 08:30:00'), DATE_FORMAT(DATE_SUB(NOW(), INTERVAL 13 DAY), '%Y-%m-%d 09:30:00')),
+(1, 'Project Deadline', 'Submit project deliverables', DATE_FORMAT(DATE_SUB(NOW(), INTERVAL 14 DAY), '%Y-%m-%d 11:00:00'), DATE_FORMAT(DATE_SUB(NOW(), INTERVAL 14 DAY), '%Y-%m-%d 13:00:00')),
+(1, 'Movie Night', 'Watch movie with family', DATE_FORMAT(DATE_SUB(NOW(), INTERVAL 15 DAY), '%Y-%m-%d 20:00:00'), DATE_FORMAT(DATE_SUB(NOW(), INTERVAL 15 DAY), '%Y-%m-%d 22:00:00')),
+(1, 'Software Training', 'Training session for new software', DATE_FORMAT(DATE_ADD(NOW(), INTERVAL 1 DAY), '%Y-%m-%d 09:00:00'), DATE_FORMAT(DATE_ADD(NOW(), INTERVAL 1 DAY), '%Y-%m-%d 10:00:00')),
+(1, 'Product Demo', 'Demonstration of new product features', DATE_FORMAT(DATE_ADD(NOW(), INTERVAL 2 DAY), '%Y-%m-%d 11:00:00'), DATE_FORMAT(DATE_ADD(NOW(), INTERVAL 2 DAY), '%Y-%m-%d 12:00:00')),
+(1, 'Client Meeting', 'Discuss project updates with client', DATE_FORMAT(DATE_ADD(NOW(), INTERVAL 3 DAY), '%Y-%m-%d 14:00:00'), DATE_FORMAT(DATE_ADD(NOW(), INTERVAL 3 DAY), '%Y-%m-%d 15:00:00')),
+(1, 'Training Session', 'Employee training session', DATE_FORMAT(DATE_ADD(NOW(), INTERVAL 4 DAY), '%Y-%m-%d 09:00:00'), DATE_FORMAT(DATE_ADD(NOW(), INTERVAL 4 DAY), '%Y-%m-%d 11:00:00')),
+(1, 'Board Meeting', 'Monthly board meeting', DATE_FORMAT(DATE_ADD(NOW(), INTERVAL 5 DAY), '%Y-%m-%d 10:00:00'), DATE_FORMAT(DATE_ADD(NOW(), INTERVAL 5 DAY), '%Y-%m-%d 12:00:00')),
+(1, 'Team Building', 'Team-building activity', DATE_FORMAT(DATE_ADD(NOW(), INTERVAL 6 DAY), '%Y-%m-%d 13:00:00'), DATE_FORMAT(DATE_ADD(NOW(), INTERVAL 6 DAY), '%Y-%m-%d 15:00:00')),
+(1, 'Project Deadline', 'Submit project deliverables', DATE_FORMAT(DATE_ADD(NOW(), INTERVAL 7 DAY), '%Y-%m-%d 17:00:00'), DATE_FORMAT(DATE_ADD(NOW(), INTERVAL 7 DAY), '%Y-%m-%d 19:00:00')),
+(1, 'Business Lunch', 'Lunch meeting with business partners', DATE_FORMAT(DATE_ADD(NOW(), INTERVAL 8 DAY), '%Y-%m-%d 12:00:00'), DATE_FORMAT(DATE_ADD(NOW(), INTERVAL 8 DAY), '%Y-%m-%d 13:00:00')),
+(1, 'Training Workshop', 'Technical training workshop', DATE_FORMAT(DATE_ADD(NOW(), INTERVAL 9 DAY), '%Y-%m-%d 10:00:00'), DATE_FORMAT(DATE_ADD(NOW(), INTERVAL 9 DAY), '%Y-%m-%d 12:00:00')),
+(1, 'Project Kickoff', 'Kickoff meeting for new project', DATE_FORMAT(DATE_ADD(NOW(), INTERVAL 10 DAY), '%Y-%m-%d 09:00:00'), DATE_FORMAT(DATE_ADD(NOW(), INTERVAL 10 DAY), '%Y-%m-%d 10:00:00')),
+(1, 'Team Sync', 'Weekly team synchronization', DATE_FORMAT(DATE_ADD(NOW(), INTERVAL 11 DAY), '%Y-%m-%d 15:00:00'), DATE_FORMAT(DATE_ADD(NOW(), INTERVAL 11 DAY), '%Y-%m-%d 16:00:00')),
+(1, 'Client Presentation', 'Present project progress to client', DATE_FORMAT(DATE_ADD(NOW(), INTERVAL 12 DAY), '%Y-%m-%d 14:00:00'), DATE_FORMAT(DATE_ADD(NOW(), INTERVAL 12 DAY), '%Y-%m-%d 15:00:00')),
+(1, 'Company Event', 'Annual company event', DATE_FORMAT(DATE_ADD(NOW(), INTERVAL 13 DAY), '%Y-%m-%d 18:00:00'), DATE_FORMAT(DATE_ADD(NOW(), INTERVAL 13 DAY), '%Y-%m-%d 20:00:00')),
+(1, 'Workshop', 'Creative workshop for team members', DATE_FORMAT(DATE_ADD(NOW(), INTERVAL 14 DAY), '%Y-%m-%d 11:00:00'), DATE_FORMAT(DATE_ADD(NOW(), INTERVAL 14 DAY), '%Y-%m-%d 13:00:00')),
+(1, 'Client Visit', 'Visit to client office for discussion', DATE_FORMAT(DATE_ADD(NOW(), INTERVAL 15 DAY), '%Y-%m-%d 10:00:00'), DATE_FORMAT(DATE_ADD(NOW(), INTERVAL 15 DAY), '%Y-%m-%d 13:00:00'));
